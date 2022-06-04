@@ -6,7 +6,8 @@ fun main() {
      *      Tek tirnaklarin arasina, harf, sayi, escape char ya da unicode yazarak kullanilir.
      *      Cift tirnak icerisine yazilirsa String olur, Char olmaz.
      * **/
-
+    val firstCharOfName2: Char = '½'
+    val firstCharOfName1: Char = '*'
     val firstCharOfName: Char = 'G'
 //    val firstCharOfName2 : Char = "G"
 //    val firstCharOfName3: Char = 'Gö'

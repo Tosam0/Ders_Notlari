@@ -9,13 +9,15 @@ fun main() {
     val isStudent: Boolean = true
     val isTeacher: Boolean = false
 
-//    val isStudent2: Boolean = 1
-//    val isTeacher2: Boolean = 0
+//   val isStudent2: Boolean = 1
+    //val isTeacher2 = 0
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
     /**
-     *      &&, ||, and, or, xor gibi operatorler ile beraber kullanilir.
+     *      &&, ve demek ve "and" te kullanınlır
+     *      ||, veya demek  yerine "or" da kullanılır
+     *      and, or, xor gibi operatorler ile beraber kullanilir.
      * **/
     if (isStudent && isTeacher) {
 

@@ -74,7 +74,7 @@ fun main() {
     var sayı :String= "5.1"
     var sayıcevir : Double = sayı.toDouble()
     println(" :"+sayı)
-
+ 
 
     //java
     val byte1: String = "3"
