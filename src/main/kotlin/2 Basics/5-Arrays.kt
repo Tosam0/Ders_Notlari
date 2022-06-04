@@ -13,7 +13,9 @@ fun main() {
     val studentNames = arrayOf("Ahmet", "Ayşe", "Veli", "Derya")
     val firstCharOfNames = arrayOf('A', 'A', 'V', 'D')
     val mixedArray = arrayOf<Any>(13, "Ahmet", 'V', true)
-    val arrayOfNulls = arrayOfNulls<String>(4)
+    val arrayOfNulls = arrayOfNulls<String>(5)
+
+
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
@@ -29,7 +31,9 @@ fun main() {
 //        pseudo Codes
 //        pseudo Codes
         3.14 * it
+
     }
+    println("name ====" + carNamesMini  )
 
     // 10 elemanli, 0-9 arasindaki index degerlerinin karesini alan bir dizi olusturur.
     // {0,1,2,4,9,16,25,36,49,81}
@@ -45,15 +49,27 @@ fun main() {
      *      Bu tarz tanimlamalarda ilgili index degerine atama icin set(index, value) ya da [index] = value kullanilabilir.
      *      Bu tarz tanimlamalarda ilgili index degerindeki degisken degerine get(index) ya da [index] seklinde ulasilabilir.
      * **/
-    val firstCharOfCountries = CharArray(4)
-    firstCharOfCountries[0] = 'T'
-    firstCharOfCountries.set(1, 'İ')
-    firstCharOfCountries.set(3, 'A')
 
-    firstCharOfCountries[2] = 'B'
+    val firstCharOfCountries = CharArray(5)
+    firstCharOfCountries[0] = 'T'  //0
+    firstCharOfCountries.set(1, 'İ')  //1
+    firstCharOfCountries.set(3, 'A')   //2
+    firstCharOfCountries[2] = '8'  //3
+    firstCharOfCountries[4] = '5'  //4
+ //   firstCharOfCountries[4] = 'x'  diziler 0 dan başlar
+  //  firstCharOfCountries[5] = 'z'
 
-    println("firstCharOfCountrys index 2 :" + firstCharOfCountries.get(2))
-    println("firstCharOfCountrys index 2 :" + firstCharOfCountries[2])
+    println("firstCharOfCountrys index 2 :" + firstCharOfCountries.get(3))
+    println("firstCharOfCountrys index 2 :" + firstCharOfCountries[3])
+
+////  IntArray denemesi
+    val denemeInt = IntArray(5)
+    denemeInt[0] =5
+    denemeInt[1] =20
+    denemeInt[2]= 22
+    denemeInt[3]= 220
+
+    println("DenemeInt= index  :" + denemeInt.get(2))
 
 /* -------------------------------------------------------------------------------------------------------------------*/
     /**
