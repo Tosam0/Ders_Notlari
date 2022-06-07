@@ -7,20 +7,31 @@ fun main() {
      *      Eger bir degiskene tip verilmez ve direkt null deger atamasi yapilirsa, IDE tip cikarimi yaparken
      *      bu degiskenin degerini Nothing? olarak isaretler. Cunku hangi tipe karsilik geldigini bilemez
      * **/
-    val name: String? = null
-    val age: Int? = null
+    var name: String? = null
+    var age: Int? = null
+    val country:Any?= 7
+    name = 4.toString()
+    println("name :$name")
+
+    println(age)
+
 
     val number = null
 
     val number3 = null // Nothing?
 
     var number1: Int? = null
-    var number2: Int? = null
+    var number2: Int?
 
+    number2 = 1
+    println(" number1 = $number1")
+    println(" number2 = $number2")
 
     var result: Int? = 0
+
     result!!.plus(324)
     result?.plus(324)
+    println("result : $result")
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
@@ -45,4 +56,6 @@ fun main() {
     if (number1 != null && number2 != null) {
         result = number1 + number2
     }
+
+
 }

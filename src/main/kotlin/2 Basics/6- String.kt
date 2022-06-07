@@ -18,11 +18,14 @@ fun main() {
     for (char in name) {
         println(char)
     }
+    println("+++ ${nameArray[4]}")
+    //todo iş görüşmesinde çıkar
 
     val awesomeKeKod = "KeKod is Awesome"
     val firstCharOfAwesomeKeKod = awesomeKeKod[awesomeKeKod.indices.first]
     val lastCharOfAwesomeKeKod = awesomeKeKod[awesomeKeKod.indices.last]
 
+    println("ffffffff" + firstCharOfAwesomeKeKod + lastCharOfAwesomeKeKod)
 /* -------------------------------------------------------------------------------------------------------------------*/
 
     /**
@@ -32,7 +35,6 @@ fun main() {
     val numbersValue: String = "value" + (4 + 2 + 8)
 //    val numbersValue2: String = (4 + 2 + 8) + "value" // Calismaz. Comment'i kaldir kontrol et istersen keko
 
-    println("numbersValue" + numbersValue)
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
@@ -41,8 +43,9 @@ fun main() {
      *      Bunun icin sadece $ isaretine ihtiyaciniz vardir. Bu yapiya String template denir.
      *      Eger degiskenin bir ozelligine ihtiyac duyacaksaniz ${} seklinde kullanilir.
      * **/
-    println("numbersValue $numbersValue")
-    println("numbersValue ${numbersValue.length}")
+    println("numbers Value== " + numbersValue)
+    println("numbersValuee $numbersValue ersef")
+    println("numbersValueee ${numbersValue.length}")
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
@@ -54,10 +57,11 @@ fun main() {
      *      Alttaki ornek icin 3 satirdan da $ isaretinin solundaki bosluga kadarini siler.
      *      Raw Stringlerin icinde escape karakterler calismaz.
      * **/
+    //todo iş görüşmesinde çıkar
     val rawPineTree = """
-                *
-     $         ***
-              *****
+               *
+              ***
+             *****
     """.trimIndent()
 
     /**
@@ -69,7 +73,7 @@ fun main() {
     val rawPineTree2 = """
                 *
      $         ***
-              *****
+            $  *****
     """.trimMargin("$")
 
     println(rawPineTree)
