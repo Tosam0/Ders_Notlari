@@ -1,18 +1,23 @@
 package `2 Basics`.controlflow
 
-data class PairNumber(val numberOne: Int, val numberTwo: Int) {
+//todo Kekod - Ders7 : Kotlin Control Flows tekrardan izle
+data class PairNumber(var numberOne: Int, var numberTwo: Int) {
+
+
 
     operator fun minus(pairNumber: PairNumber): PairNumber {
 
         val returnPairObject = PairNumber(
-            numberOne - pairNumber.numberOne,
-            numberTwo - pairNumber.numberTwo
+            numberOne - pairNumber.numberOne, numberTwo - pairNumber.numberTwo
         )
 
         println("Sonuc = (${returnPairObject.numberOne} , ${returnPairObject.numberTwo})")
 
         return returnPairObject
     }
+
+
+
 
 //    operator fun String.plus(value : String): Int{
 //
@@ -34,10 +39,10 @@ fun main(args: Array<String>) {
 
     val resultOne = pairNumberOne.numberOne - pairNumberTwo.numberOne
     val resultTwo = pairNumberOne.numberTwo - pairNumberTwo.numberTwo
-    println("Sonuc = ($resultOne, $resultTwo)")
+    println("Sonuclar= ($resultOne, $resultTwo)")
 
     val pairNumber = pairNumberOne - pairNumberTwo
-
+    println("cıkartmak $pairNumber")
     val pairNumber2 = pairNumberOne - pairNumberTwo
 
     val pairNumber3 = pairNumberOne - pairNumberTwo

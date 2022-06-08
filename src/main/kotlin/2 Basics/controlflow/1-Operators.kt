@@ -10,40 +10,44 @@ fun main(args: Array<String>) {
     println("NumberOne : ${numberOne}")
     println("NumberOne : ${++numberOne}") //değişkenin başında olursa sayısı direk artar.
 
-    print("${numberOne + numberTwo} ")
-    print(" ")
+    println("${numberOne + numberTwo} ")
+    println(" ////")
     println(numberOne.plus(numberTwo))
 
     print("${numberOne - numberTwo} ")
-    println(numberOne.minus(numberTwo))
+    println(numberOne.minus(numberTwo)) //minu çıkartma
 
     print("${numberOne * numberTwo} ")
     println(numberOne.times(numberTwo))
 
     print("${numberOne / numberTwo} ")
-    println(numberOne.div(numberTwo))
+    println(numberOne.div(numberTwo)) //bölme işareti
 
-    print("${numberOne % numberTwo} ")
+    print("${numberOne % numberTwo} ") // kalanı bulmak için yapılır bölme değildir.ilk sayı ikinci sayıya bölünürse kalanı bulur.
     println(numberOne.rem(numberTwo))
+    println(((1..100).filter { it % 3 == 0 }))
 
     println("------------------------------------------------------------")
 
     print("Final Notunu Giriniz : ")
     val grade = readLine()!!.toInt()
-
+    // todo bu kısımı range ile dene ÖDEV sANA
     val charNote = if (grade == 100) {
         "$grade = AA"
     } else if (grade <= 99 && grade >= 80) {
         "$grade = BB"
     } else if (grade <= 79 && grade >= 50) {
         "$grade = CC"
-    } else if (grade <= 49 && grade >= 20) {
+    } else if (grade <= 49 && grade >= 20) { //&& veya demek.
         "$grade = DD"
     } else if (grade <= 19 && grade >= 0) {
         "$grade = FF"
     } else {
         "$grade = Bulunamadı!!"
     }
+
+    // todo ödevin devamı Range ile yapımı daha performanslı olanı.
+
 
     println("------------------------------------------------------------")
 
@@ -66,10 +70,11 @@ fun main(args: Array<String>) {
     */
 
     println("------------------------------------------------------------")
-
+    // sadece baştakinin değeri değişiyor.
+    // todo quizlerde gelebilir.
     var a = 20
     var b = 5
-    a += b
+    a += b  //önce a ve b yi tolpla sonra a ya eşitle demek
     println("a+=b :" + a)
     a -= b
     println("a-=b :" + a)
@@ -89,17 +94,18 @@ fun main(args: Array<String>) {
      */
 
     println("------------------------------------------------------------")
+// todo quizlerde gelebilir.
 
     var numbOne = 10
     var numbTwo = 5
     var flag = true
     println("+a :" + +numbOne)
     println("q-b :" + -numbTwo)
-    println("++a :" + ++numbOne)
-    println("a++ :" + numbOne++)
+    println("++a :" + ++numbOne)//ikisinin anlamı +lar önde ise önde artırır sonra yazdırır
+    println("a++ :" + numbOne++)//ikisinin anlamı +lar arkada ise önde yazdırır sonra artıtır.
     println("a :" + numbOne)
     println("--b :" + --numbTwo)
-    println("!flag :" + !flag)
+    println("!flag :" + !flag)//!flag true yada false nin tersini yazdırır ne yazarsa tersi yazar.
 
     /*
     	+a      a.unaryPlus()
@@ -115,5 +121,6 @@ fun main(args: Array<String>) {
      *
      *      === ifadesi isaret edilen referans tipleri karsilatirir.
      *      == ifadesi degeri karsilastirir.
+     *      = ifadesi değer ataması yapar.
      */
 }

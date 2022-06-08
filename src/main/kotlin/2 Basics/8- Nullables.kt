@@ -29,8 +29,8 @@ fun main() {
 
     var result: Int? = 0
 
-    result!!.plus(324)
-    result?.plus(324)
+    result!!.plus(324)//uyğylama patlicak eğer null ise
+    result?.plus(324) //değişken patlicak uyğylama çalışıcak null ise
     println("result : $result")
 
 /* -------------------------------------------------------------------------------------------------------------------*/
@@ -56,6 +56,4 @@ fun main() {
     if (number1 != null && number2 != null) {
         result = number1 + number2
     }
-
-
 }

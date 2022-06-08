@@ -2,6 +2,7 @@ package `2 Basics`.controlflow
 
 import java.io.IOException
 
+//todo  crtl+ alt +L == satırları düzelit
 fun main() {
 
     /**
@@ -29,8 +30,30 @@ fun main() {
     } else {
         "Öğrenci Değil"
     }
-
     println(result)
+
+    print("Cinsiyetin  ne?")
+    val sex=readLine()!!
+    val cins:String  =if (sex == "erkek"){
+        "erkek"
+    }else{
+        "kadın"
+    }
+    println(cins)
+
+
+
+    print("evcil hayvanının hangi sesi çırartır?")
+    val hayvan=readLine()!!
+    if (hayvan.contains("miyav")){
+        println("kedi")
+    }else{
+        println("köpek")
+    }
+
+
+
+    //println(cins)
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
@@ -39,7 +62,11 @@ fun main() {
      *      Ternary yerine asagidaki gibi kullanim yapabilirsiniz.
      * **/
     val isStudent = false
-    val isStudent2 = if (isStudent) {"true"} else {"false"}
+    val isStudent2 = if (isStudent) {
+        "true"
+    } else {
+        "false"
+    }
 //    String name2 = isStudent ? "true" : "false" ternary operator
 
     print("Notunuzu Giriniz : ")
@@ -57,13 +84,14 @@ fun main() {
         print("Sen okulu birak :)")
     }
 
+    //todo burayı tekrarla
 //    true && true = true
 //    true && false = false
-//    false && true = false
+//    false && true = false       --- ve  &&
 //    false && false = false
 //
 //    true || true = true
-//    true ||false = true
+//    true ||false = true      ---  veya  ||
 //    false || true = true
 //    false ||false = false
 
@@ -129,10 +157,12 @@ fun main() {
     if (isStudent) {
         println("Student")
         throw IOException()
-//        return
+//       return
     }
 
     otherMethod()
+
+
 }
 
 private fun otherMethod() {

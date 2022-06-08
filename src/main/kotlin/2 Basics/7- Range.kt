@@ -33,7 +33,7 @@ fun main() {
     //   val reversedNumbers = 100..1 // Calismaz. Comment'i kaldir kontrol et istersen keko
     val reversedNumbers = 100.downTo(1)
     val reversedNumbers2 = 100 downTo 1
-    print("reversedNumbers")
+   print("reversedNumbers")
     reversedNumbers.forEach { print(" " + it) }
     println()
 
@@ -47,9 +47,10 @@ fun main() {
     val gradeNumbers3 = 10..99 // [10,100)
         println("Util = "+gradeNumbers)
     val gradeNumbers2 = 10 until 100
-    print("gradeNumbers.")
+
     gradeNumbers.forEach { print(" " + it) }
-    println()
+    println("++++++++" +gradeNumbers22)
+
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 

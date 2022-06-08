@@ -27,3 +27,25 @@ fun Int.toOrdinal():String{
 val ab =66.toOrdinal()
     println(ab)
 }
+
+/*
+if (this % 100 in 0 ..10) suffix ="FF"
+if (this % 100 in 11 ..29) suffix ="DD"
+if (this % 100 in 30 ..49) suffix ="CC"
+if (this % 100 in 50 ..79) suffix ="'BB"
+if (this % 100 in 80 ..98) suffix ="AA"
+if (this % 100 in 99 ..100) suffix ="AA+"
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
