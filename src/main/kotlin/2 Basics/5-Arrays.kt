@@ -17,7 +17,10 @@ fun main() {
     val studentNumara = arrayOf<Short>(10, 62, 5, 55, 56)
     println("Sonucu = " + studentNumara)
 
-    val deneme: Array<Any> = arrayOf("1", "asd")
+    val deneme: Array<Any> = arrayOf("1", "asd","eraesreaf")
+    studentNames.set(2,"Kemal") //set değiştir
+    studentNames.get(2) //get getir
+    println("GEt Set denemesi "+studentNames[2])
 
 
     studentNumara[2] = 300000.toShort()
@@ -103,5 +106,29 @@ fun main() {
     awesomeArray[4] = "Mehtap"
 //    awesomeArray[5] = "Mehtap" // Calismaz. Comment'i kaldir kontrol et istersen keko
 
+///////////
+    val digerSet = HashSet<String>()
+    digerSet.add("ahmet")
+    digerSet.add("mehmet")
+    digerSet.add("mehmet")
+    digerSet.add("mehmet")
+    digerSet.toSet()
+//////////
 
+    digerSet.forEach{
+        println(it)
+    }
+/////////////
+    val yemekkaloriMap = hashMapOf<String, Any>()
+    yemekkaloriMap.put("ahmet",2)
+    yemekkaloriMap.put("samet",22)
+    yemekkaloriMap.put("memet",23)
+    println(yemekkaloriMap.get("ahmet"))
+//////////////
+    val benimMap = HashMap<String, String>()
+    benimMap.put("değer","örnek" )
+//////////////
+
+    val deneme1 = hashMapOf<String,Int>("zago" to 20,"Örnek" to 2656)
+        println(deneme1)
 }

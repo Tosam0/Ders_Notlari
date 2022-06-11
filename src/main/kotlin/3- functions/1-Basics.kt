@@ -18,10 +18,19 @@ package `3- functions`
 //fun name(surName : String = "Gökhan") : String = "Gökhan"
 fun main() {
 
+
     // Fonksiyon cagirilirken ismi ve parametreleri kullanilir.
     // Eger bir geri donusu varsa bir degiskene atabilir.
     takeSquare(2)
     val squareValue = takeSquare(2)
+    val squareValue2 = takeSquare(3)
+    val squareValue3 = takeSquare(4)
+    val squareValue4 = takeSquare(5)
+    println("$squareValue  $squareValue2  $squareValue3  $squareValue4")
+
+    //todo shift + F6 isimi değiştir
+    //todo ctrl+ d üsteki, satırı kopyalar.
+    //todo crtl+ r isimn değiştirme
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
@@ -36,6 +45,8 @@ fun main() {
     // Ide'ye hangi parametreye deger atadiginizi soylemek icin Named Arguments'leri kullanmaniz gerekir.
     reformatMessage("Message", true, 7, "tr")
     reformatMessage(message = "Message", size = 7, lang = "tr")
+
+    reformatMessage("Message", size = 7, lang = "tr")
     reformatMessage("Message", true, 7)
     reformatMessage("Message", size = 7)
 
@@ -69,7 +80,7 @@ fun takeSquare(number: Int): Int {
 //    asd
 //    asd
 //    sa
-    return 2 * number
+    return number * number
 }
 
 /* -------------------------------------------------------------------------------------------------------------------*/
@@ -80,7 +91,7 @@ fun takeSquare(number: Int): Int {
  *      Tekrar tekrar ayni fonksiyonun farkli varyasyonlarini yazmak durumunda kalmayiz.
  * **/
 fun reformatMessage(message: String, isUpperCase: Boolean = false, size: Int, lang: String = "tr") {
-    println("Message : " + message + "isUpperCase : " + isUpperCase + "Size : " + size + "lang : " + lang)
+    println("Message : " + message + "isUpperCase :  " + isUpperCase +  " Size : " + size + " lang : " + lang)
 }
 
 // Default arguments sayesinde asagidaki fonksiyonlari yazmak zorunda kalmayiz.
@@ -173,3 +184,4 @@ fun getListCount(): Int = userList.size
 fun getListCount2(): Int {
     return userList.size
 }
+//iyi geceler

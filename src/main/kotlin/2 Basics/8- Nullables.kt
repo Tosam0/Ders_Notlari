@@ -9,7 +9,7 @@ fun main() {
      * **/
     var name: String? = null
     var age: Int? = null
-    val country:Any?= 7
+    val country: Any? = 7
     name = 4.toString()
     println("name :$name")
 
