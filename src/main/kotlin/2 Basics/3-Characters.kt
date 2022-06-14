@@ -59,7 +59,7 @@ fun main() {
     /**
      *      Unicode karakterlerini de tanimlamak icin kullanilabilir.
      * **/
-    val uniCode = '\uFF00'
+    val uniCode = '\uFF01'
 
     println("uniCode" + uniCode)
 }

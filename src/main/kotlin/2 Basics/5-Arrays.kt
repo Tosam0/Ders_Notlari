@@ -22,6 +22,8 @@ fun main() {
     studentNames.get(2) //get getir
     println("GEt Set denemesi "+studentNames[2])
 
+    mixedArray.set(0,13)
+    println("$mixedArray ++++++")
 
     studentNumara[2] = 300000.toShort()
     studentNumbers[4] = 11

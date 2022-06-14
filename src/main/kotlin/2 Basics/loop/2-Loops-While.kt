@@ -20,7 +20,7 @@ fun main() {
     }
 
 
-    println("-----------------")
+    println("\n-----------------")
 
     for (value in 0..110) {
         if (value < 5) {
@@ -29,4 +29,9 @@ fun main() {
             return
         }
     }
+
+
+
+
+
 }

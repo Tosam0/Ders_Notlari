@@ -33,12 +33,15 @@ fun main(){
 
     val minByteValue: Byte= Byte.MIN_VALUE
     val maxByetValue:Byte=Byte.MAX_VALUE
+    println("minByteValue ve maxByetValue $minByteValue  ve $maxByetValue")
+    println("minByteValue ve maxByetValue ${minByteValue  + maxByetValue} size {$minByteValue.size}")
 
     val b = 3.2F
 
     val c =2312312L
 
     val d :Int?= null
+    println(d)
     val x=3.1223e1
 
     val hexadecimalNumber =0x756

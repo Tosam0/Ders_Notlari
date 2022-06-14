@@ -12,7 +12,7 @@ fun main() {
 
     surName = "Tezel"
 
-    // TODO (ahmet) todo özel bir isim
+
     println(name)
     println(surName)
 

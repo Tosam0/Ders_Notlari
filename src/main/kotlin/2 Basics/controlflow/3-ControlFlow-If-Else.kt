@@ -2,7 +2,7 @@ package `2 Basics`.controlflow
 
 import java.io.IOException
 
-//todo  crtl+ alt +L == satırları düzelit
+
 fun main() {
 
     /**

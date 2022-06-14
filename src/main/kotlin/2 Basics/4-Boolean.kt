@@ -20,7 +20,7 @@ fun main() {
      *      and, or, xor gibi operatorler ile beraber kullanilir.
      * **/
     if (isStudent && isTeacher) {
-
+    println( )
     }
 
     if (isStudent and isTeacher) {

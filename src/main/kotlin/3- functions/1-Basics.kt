@@ -21,21 +21,19 @@ fun main() {
 
     // Fonksiyon cagirilirken ismi ve parametreleri kullanilir.
     // Eger bir geri donusu varsa bir degiskene atabilir.
-    takeSquare(2)
-    val squareValue = takeSquare(2)
-    val squareValue2 = takeSquare(3)
-    val squareValue3 = takeSquare(4)
-    val squareValue4 = takeSquare(5)
+    //  takeQube(2)
+    val squareValue = takeQube(2)
+    val squareValue2 = takeQube(3)
+    val squareValue3 = takeQube(4)
+    val squareValue4 = takeQube(5)
     println("$squareValue  $squareValue2  $squareValue3  $squareValue4")
 
-    //todo shift + F6 isimi değiştir
-    //todo ctrl+ d üsteki, satırı kopyalar.
-    //todo crtl+ r isimn değiştirme
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
     //  Bir class'in fonksiyonunu cagirirken ise nokta isaretini kullaniriz.
     Math.pow(2.0, 3.0)
+    // Math().pow(2.0,3.0)
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
@@ -47,8 +45,10 @@ fun main() {
     reformatMessage(message = "Message", size = 7, lang = "tr")
 
     reformatMessage("Message", size = 7, lang = "tr")
-    reformatMessage("Message", true, 7)
-    reformatMessage("Message", size = 7)
+    reformatMessage("Message", size = 7, "trr")
+    reformatMessage("Message", true, size = 7)
+    reformatMessage("Message", 7)
+
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
@@ -57,6 +57,7 @@ fun main() {
 
     // vararg parametresi olarak arrayOf kullanilmak istenirse * operatoru eklenmelidir. (spread operatoru)
     // bu operator diger dillerdeki pointer kullanimi anlamina gelmez. Kotlinde pointerlar yoktur.
+    // vararag a denk geldiğini göstermek için başına "*arrayOf" konulur.
     getUserInfo(*arrayOf("Gökhan", "ÖZTÜRK", "Istanbul", "Turkiye"), key = 4)
 
     getUserInfo2(3, "Gökhan", "ÖZTÜRK", "Istanbul", "Turkiye", "", "", "")
@@ -70,7 +71,7 @@ fun main() {
  *    @param number degisken tanimlanir gibi tanimlanir.
  *    Fonksiyon parametresi tanimlanirken, val var gibi betimleyiciler kullanilmaz.
  * **/
-fun takeSquare(number: Int): Int {
+fun takeQube(number: Int): Int {
 //    asdsads
 //    asdsad
 //    sad
@@ -90,21 +91,23 @@ fun takeSquare(number: Int): Int {
  *      Default deger atamasi yapmak function overload islemi yapmanizi saglar.
  *      Tekrar tekrar ayni fonksiyonun farkli varyasyonlarini yazmak durumunda kalmayiz.
  * **/
+
 fun reformatMessage(message: String, isUpperCase: Boolean = false, size: Int, lang: String = "tr") {
-    println("Message : " + message + "isUpperCase :  " + isUpperCase +  " Size : " + size + " lang : " + lang)
+    println("Message : " + message + "isUpperCase :  " + isUpperCase + " Size : " + size + " lang : " + lang)
 }
 
 // Default arguments sayesinde asagidaki fonksiyonlari yazmak zorunda kalmayiz.
-//fun reformatMessage(message: String, size: Int, lang: String = "tr") {
-//
-//}
-//fun reformatMessage(message: String, isUpperCase: Boolean = false, size: Int) {
-//
-//}
-//
-//fun reformatMessage(message: String, size: Int) {
-//
-//}
+fun reformatMessage(message: String, size: Int, lang: String = "tr") {
+    println("Message: " + message + " lang :" + lang + " size :" + size)
+}
+
+fun reformatMessage(message: String, isUpperCase: Boolean = false, size: Int) {
+
+}
+
+fun reformatMessage(message: String, size: Int) {
+    println("message =" + message + " size =" + size)
+}
 
 /**
  *      Default degeri olan parametrelere sahip bir fonksiyon Java siniflarindan cagrilacaksa eger,
@@ -112,8 +115,17 @@ fun reformatMessage(message: String, isUpperCase: Boolean = false, size: Int, la
  *      ilgili fonksiyonun tum varyasyonlari yazilir (overload edilir)
  * **/
 @JvmOverloads
-fun print(message: String = "Message") {
+fun printsssss1(message: String = "Message", size1: Int = 0) {
     println(message)
+}
+
+fun boo() {
+    printsssss1()
+    printsssss1("messsage")
+    printsssss1(size1 = 1)
+    printsssss1(message = "messsage")
+    printsssss1(message = "messsage" , size1 = 3)
+    println(printsssss1("ahmet"))
 }
 
 /**
@@ -129,7 +141,10 @@ open class A {
 
 class B : A() {
     override fun foo(i: Int) { /*...*/
+        println("////////////////////////")
+        println(2)
     }  // no default value allowed
+
 }
 
 /* -------------------------------------------------------------------------------------------------------------------*/

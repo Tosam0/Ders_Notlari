@@ -31,7 +31,7 @@ fun main(args: Array<String>) {
 
     print("Final Notunu Giriniz : ")
     val grade = readLine()!!.toInt()
-    // todo bu kısımı range ile dene ÖDEV sANA
+
     val charNote = if (grade == 100) {
         "$grade = AA"
     } else if (grade <= 99 && grade >= 80) {
@@ -46,7 +46,7 @@ fun main(args: Array<String>) {
         "$grade = Bulunamadı!!"
     }
 
-    // todo ödevin devamı Range ile yapımı daha performanslı olanı.
+
 
 
     println("------------------------------------------------------------")

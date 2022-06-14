@@ -11,7 +11,6 @@ fun main(args: Array<String>) {
 
 //TEkil yorum satırı
 
-// Todo (ahmet) daha sonra düzeltilecek
 
 
 
