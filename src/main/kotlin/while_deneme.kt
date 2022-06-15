@@ -15,6 +15,9 @@ fun main(){
 
     }while (i<5)
 
+
+
+
 val dizi = arrayOf<Any>("ahmet",1,true,10,"6")
  //   dizi[0] ="samet"
 
@@ -35,5 +38,23 @@ var arrayint =IntArray(12)
     println(arrayint[0])
 
 
+   vararrrg(3,1.5556,  "samet","ahmet","deneme")
+  //  vararrrg(doubleee = 1.2 , degisken = "asdsad","asdsad")
 
 }
+fun vararrrg(size:Int, doubleee:Double =1.2, vararg degisken: String){
+    println( "degi " +degisken[0]+ " size "+size+ " Double "+doubleee)
+    degisken.size
+    degisken[newclass.name1.index]
+    degisken[newclass.soyad.index]
+    degisken[newclass.sehir.index]
+    println(degisken[newclass.sehir.index])
+
+println("////////////////////////////////////////////////////")
+}
+enum class newclass(val index: Int){
+    name1(0),
+    soyad(1),
+    sehir(2)
+}
+

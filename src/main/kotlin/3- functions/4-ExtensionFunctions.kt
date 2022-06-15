@@ -38,17 +38,17 @@ fun main() {
 /* -------------------------------------------------------------------------------------------------------------------*/
 
     // extension fonksiyonlar ister direkt value'lar uzerinden cagrilabilir.
-    (3 + 0.14).log("")
-    1341.log("")
+    (3 + 0.14).log1("")
+    1341.log1("")
     1341.toFloat()
-    18608268888.log("")
+    18608268888.log1("")
 
-    (3 + 0.14) log ""
+    (3 + 0.14) log1 ""
 
     // isterseniz de degiskenler uzerinden.
-    pi.log("")
-    schoolNumber.log("")
-    tcIdentityNumber.log("")
+    pi.log1("")
+    schoolNumber.log1("")
+    tcIdentityNumber.log1("")
 
 //    1341.extToString()
 
@@ -57,11 +57,12 @@ fun main() {
     // extension fonksiyonlar sari renkte gozukurler.
     val result: Int = "3".extPlus("5")
     val result2: Int = "3" extPlus "5"
+    println(" +++++++++++++ $result")
 
     // infix fonksiyonlar extension fonksiyonlarla kullanilabilir demistik.
     // extPlus infix extension oldugu icin . (nokta) kullanimina ihtiyac duymaz.
     // log ise sadece extension fonksiyon oldugu icin . (nokta) ile cagirilir.
-    ("3" extPlus "5").log("")
+    ("3" extPlus "5").log1("")
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
@@ -92,7 +93,7 @@ fun log2(number: Number) {
  *      this ifadesi, extension yapilan degeri verir. 3 log "4" yaparsaniz,
  *      asagidaki kod size emptyParam = "4", this = 3 olarak verilir.
  * **/
-infix fun Number.log(emptyParam: String) {
+infix fun Number.log1(emptyParam: String) {
     println(emptyParam + this)
 }
 
@@ -115,7 +116,7 @@ open class Shape {
 
     fun main() {
         intNumber.extToString()
-        intNumber.log("")
+        intNumber.log1("")
     }
 
 /* -------------------------------------------------------------------------------------------------------------------*/
@@ -130,7 +131,7 @@ open class Shape {
         println("")
 
         // Int.extToString() methodunu isaret eder.
-        extToString()
+     //   extToString()
 
         // Shape'e ait asagidaki uye methodu isaret eder.
         this@Shape.extToString()
@@ -148,6 +149,7 @@ open class Shape {
 /**
  *      Bir sinifin, yazilmis extension fonksiyonun aynisini (isim ayni, parametre sayisi ve tipleri ayni, ayrica geri donus tipi de ayni olmali),
  *      kendi icinde barindiriyorsa, bu durumda yazilan extension fonksiyon gecersizdir. Sinifin uye fonksiyonu cagirilir.
+ *      get ve set olması gerekiyor.
  * **/
 fun Shape.setNumber(intNumber: Int) {
     val result = intNumber * intNumber

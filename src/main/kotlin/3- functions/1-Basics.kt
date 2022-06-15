@@ -49,7 +49,6 @@ fun main() {
     reformatMessage("Message", true, size = 7)
     reformatMessage("Message", 7)
 
-
 /* -------------------------------------------------------------------------------------------------------------------*/
 
     //vararg kullanimina orgnek. key = 3'den onceki parametreler vararg parametresine denk gelir.
@@ -58,7 +57,7 @@ fun main() {
     // vararg parametresi olarak arrayOf kullanilmak istenirse * operatoru eklenmelidir. (spread operatoru)
     // bu operator diger dillerdeki pointer kullanimi anlamina gelmez. Kotlinde pointerlar yoktur.
     // vararag a denk geldiğini göstermek için başına "*arrayOf" konulur.
-    getUserInfo(*arrayOf("Gökhan", "ÖZTÜRK", "Istanbul", "Turkiye"), key = 4)
+    getUserInfo(*arrayOf("AhmetYes", "ÖZTÜRK", "Istanbul", "Turkiye"), key = 4)
 
     getUserInfo2(3, "Gökhan", "ÖZTÜRK", "Istanbul", "Turkiye", "", "", "")
 
@@ -80,8 +79,11 @@ fun takeQube(number: Int): Int {
 //    asd
 //    asd
 //    asd
+fun takeCube(number: Int):Int{
+   return number * number
+}
 //    sa
-    return number * number
+    return takeCube(number) * number
 }
 
 /* -------------------------------------------------------------------------------------------------------------------*/
@@ -158,9 +160,19 @@ class B : A() {
  *      Ancak vararg param birden fazla tanimlanirken ortada ya da basta yer alirsa, Jvm'e hazirlanirken, Array'e donusturulur.
  *      Bu da performans farki olusturur demektir.
  * **/
+enum class VarargArgument(val index:Int){
+    USER_name(0),
+    USERSur_name(0),
+    Cıth_name(0),
+    country_name(0),
+}
 fun getUserInfo(vararg userInfo: String, key: Int) {
-    userInfo[3]
     userInfo.get(3)
+    userInfo[VarargArgument.USER_name.index]
+    userInfo[VarargArgument.USERSur_name.index]
+    userInfo[VarargArgument.Cıth_name.index]
+    userInfo[VarargArgument.country_name.index]
+    println(userInfo[VarargArgument.USER_name.index])
 }
 
 fun getUserInfo2(vararg userInfo: String) {
@@ -168,15 +180,19 @@ fun getUserInfo2(vararg userInfo: String) {
     userInfo.get(3)
 }
 
+
+
 fun getUserInfo2(key: Int, vararg userInfo: String) {
     userInfo[3]
-    userInfo.get(3)
-    println(key)
+    userInfo.get(4)
+    println("ahmet   ${userInfo.get(2)} ve $key")
+
 }
 
 fun getUserInfo3(vararg userInfo: Any) {
     userInfo[3]
     userInfo.get(3)
+
 }
 
 /**
@@ -200,3 +216,6 @@ fun getListCount2(): Int {
     return userList.size
 }
 //iyi geceler
+
+
+

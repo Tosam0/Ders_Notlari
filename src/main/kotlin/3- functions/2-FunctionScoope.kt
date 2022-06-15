@@ -21,7 +21,6 @@ fun main() {
  *      Reflection ile fonksiyonlariniz erisilirken gizli kalsin isteyebilirsiniz.
  *      Bu gibi durumlarda bu cok onemli fonksiyonunuzu baska bir fonksiyon icersine yazabilirsiniz.
  * **/
-
 fun calculateAtomPhysics() {
 
     val userName = "Codemy"
@@ -51,6 +50,7 @@ fun calculateAtomPhysics() {
     println("Process has been done")
 }
 
+
 /* -------------------------------------------------------------------------------------------------------------------*/
 
 /**
@@ -68,5 +68,8 @@ class Car {
  *      Bir fonksiyon Generic tip aliyorsa, Generic Function olarak adlandirilir.
  * **/
 fun <T> setColor(colorCodeId: T) {
+
+}
+fun <A> setColor1(colorCodeId1: A) {
 
 }

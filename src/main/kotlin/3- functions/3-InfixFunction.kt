@@ -1,6 +1,9 @@
 package `3- functions`
 
+//todo araştır kotlinin önemli özellikleri infixleri araştır.
 fun main() {
+    5 downTo 1//infix fonksyon
+    5.downTo(1) //extansion fonxyon
 
     /**
      *      Daha okunakli kodlar yazmak icin kullanilir.
@@ -26,7 +29,7 @@ fun main() {
      *      and, or, xor gibi onlarca infix method vardir.
      * **/
     if (!isStudent and isMale) {
-        print("Öğrenci Olmayan Erkek")
+        println("Öğrenci Olmayan Erkek")
     }
 
     // infix kullanimi
@@ -36,6 +39,7 @@ fun main() {
     val awesomeInstance = AwesomeClass()
     // infix kullanimi
     awesomeInstance downloadImage "www.google.com.tr"
+
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
@@ -57,13 +61,11 @@ fun main() {
 
 class AwesomeClass {
 
-    // Calismaz. Comment'i kaldir kontrol et istersen keko
+    //  Calismaz. Comment'i kaldir kontrol et istersen keko
 //    infix fun downloadImage(imageUrl : String = "Ahmet"){
 //
 //    }
-
 /* -------------------------------------------------------------------------------------------------------------------*/
-
     infix fun downloadImage(imageUrl: String) {
 
     }
@@ -74,7 +76,7 @@ class AwesomeClass {
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
-    // Calismaz. Comment'i kaldir kontrol et istersen keko
+    // Calismaz. Comment'i kaldir kontrol et istersen keko vararg olduğundan
 //    infix fun <T> downloadImage2(vararg mageUrl : T){
 //
 //    }
@@ -85,14 +87,13 @@ class AwesomeClass {
     // asagidaki kullanimda AwesomeClass().downloadImage(imageUrl) kullanimi olusur aslinda. (implicit)
     fun logWhenImageDownloaded(imageUrl: String) {
         downloadImage(imageUrl)
-//        downloadImage imageUrl
+        //      downloadImage imageUrl
         this downloadImage imageUrl
     }
 }
-
 /* -------------------------------------------------------------------------------------------------------------------*/
 
 // bir sinifin disindayken infix method cagirimi yapilirsa this kullanilamaz.
-fun logWhenImageDownloaded(imageUrl: String){
-//    this downloadImage imageUrl
+fun logWhenImageDownloaded(imageUrl: String) {
+    //   this downloadImage imageUrl
 }
