@@ -77,6 +77,7 @@ fun main() {
     val shape = Shape()
     shape.setNumber(45)
     shape.main()
+
 }
 
 /* -------------------------------------------------------------------------------------------------------------------*/
@@ -132,13 +133,11 @@ open class Shape {
 
         // Int.extToString() methodunu isaret eder.
      //   extToString()
-
         // Shape'e ait asagidaki uye methodu isaret eder.
         this@Shape.extToString()
 
         println("Awesome class printi")
     }
-
     fun extToString() {
         println("Keko class printi")
     }
@@ -179,6 +178,14 @@ var Shape.type
  * **/
 class Rectangle : Shape() {
     override fun Int.extToString() {
+    }
+}
+
+///////////////////////////////////
+class aShap(): Shape(){
+    fun deneme(){
+        41.extToString()
+
     }
 }
 

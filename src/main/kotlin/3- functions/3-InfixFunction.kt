@@ -95,5 +95,5 @@ class AwesomeClass {
 
 // bir sinifin disindayken infix method cagirimi yapilirsa this kullanilamaz.
 fun logWhenImageDownloaded(imageUrl: String) {
-    //   this downloadImage imageUrl
+    //  this downloadImage imageUrl
 }
