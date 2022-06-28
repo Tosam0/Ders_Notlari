@@ -45,16 +45,17 @@ var arrayint =IntArray(12)
 fun vararrrg(size:Int, doubleee:Double =1.2, vararg degisken: String){
     println( "degi " +degisken[0]+ " size "+size+ " Double "+doubleee)
     degisken.size
-    degisken[newclass.name1.index]
-    degisken[newclass.soyad.index]
-    degisken[newclass.sehir.index]
-    println(degisken[newclass.sehir.index])
+    degisken[Newclass.name1.index]
+    degisken[Newclass.soyad.index]
+    degisken[Newclass.sehir.index]
+    println(degisken[Newclass.sehir.index])
 
 println("////////////////////////////////////////////////////")
 }
-enum class newclass(val index: Int){
+enum class Newclass(val index: Int){
     name1(0),
     soyad(1),
-    sehir(2)
+    sehir(2),
+    atobus(2)
 }
 

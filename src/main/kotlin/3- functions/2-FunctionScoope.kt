@@ -21,7 +21,7 @@ fun main() {
  *      Reflection ile fonksiyonlariniz erisilirken gizli kalsin isteyebilirsiniz.
  *      Bu gibi durumlarda bu cok onemli fonksiyonunuzu baska bir fonksiyon icersine yazabilirsiniz.
  * **/
-fun calculateAtomPhysics() {
+ fun calculateAtomPhysics() {
 
     val userName = "Codemy"
     println("Initialize Process...")

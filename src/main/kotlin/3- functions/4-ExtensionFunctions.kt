@@ -164,10 +164,11 @@ fun Shape.setNumber(intNumber: Int) {
  *      Dolayisiyla aslinda gercek anlamda bir degisken extension yapilamaz.
  *      Bu konu property vs field konusu ile beraber sinif'lar islenirken detayli anlatilacaktir.
  * **/
-var Shape.type
+var Shape.type  //="asd"
     get() = "Rectangle"
     set(value) {
         type = value
+      //  field=value
     }
 
 /* -------------------------------------------------------------------------------------------------------------------*/

@@ -10,8 +10,19 @@ fun main() {
         9, 10, 19, 29, 30, 39, 49 -> println("$countryCode5'uncu")
         else -> {
             println("geçersiz sayı")
+        }
     }
+    fun deneme333(name: String, Kod: Int): String {
+        return "Log $name"
     }
+
+    fun denmeHiderFunksion(hider: (name: String, Kod: Int) -> String) {
+        hider("Codemy,", 24)
+    }
+
+    deneme333("Herşey yolunda", 2)
+    denmeHiderFunksion(::deneme333)
+
 }
 
 

@@ -62,7 +62,7 @@ fun main() {
 class AwesomeClass {
 
     //  Calismaz. Comment'i kaldir kontrol et istersen keko
-//    infix fun downloadImage(imageUrl : String = "Ahmet"){
+//   infix fun downloadImage(imageUrl : String = "Ahmet"){
 //
 //    }
 /* -------------------------------------------------------------------------------------------------------------------*/

@@ -1,18 +1,57 @@
-
+import `4-Class`.printLog
 
 fun main() {
+      val index1 = Deneme("ahmet", "aykun", 2)
+    val index2 = Deneme("samet", "tezel", 2, 1.2)
+    val indexSonClas = Personel("Personel_1")
 
-
-    reformatMessage(  1,2,5,7,8,11,12,15,17,18,20,21,22,28,31,32,35,37,38,41,42,45,47,48,50, message = "'inci")
-    reformatMessage(  3,4,13,14,23,24,33,34,43,44, message = "'üncü")
-   reformatMessage( 0,6,16,36,40,46, message = "'ıncı")
-    reformatMessage(9,10,19,29,30,39,49, message = "'uncu")
-    println( "a" )
 }
 
-fun reformatMessage(vararg sizeInt:Int ,message: String  ) {
-   // sizeInt[25]
-  //  println(" ${sizeInt[0]}$message " )
-    //var arraydeneme= IntArray(5)
 
+class Deneme(name: String, surname: String = "aykun") {
+   private val infix = "First proporty: $name $surname".also(::println)
+    private val infixname : String
+    private val infixsurname :String
+
+    init {
+
+        infixname = name
+        infixsurname = surname
+
+        " First initializer $infixname $infixsurname".printLog()
+    }
+
+    val socontİnit = "Second property = ${name.length}".also(::println)
+
+    //  init {
+    //      println("Second  initializer")
+    //   }
+
+      constructor(name: String, surname: String, number: Number) : this(name) {
+        "1. constructor".printLN()
+      }
+    constructor(name: String, surname: String, number: Number, orantı: Double) : this(name) {
+        "2. constructor".printLog()
+    }
+
+}
+
+class Personel(val name1: String) {
+    val chalderen: MutableList<Personel> = mutableListOf<Personel>().also(::println)
+
+    init {
+
+        "Percon Class: $name1".printLN()
+    }
+
+   constructor(name1: String, perent: Personel) : this(name1) {
+       perent.chalderen.add(this)
+      "Personael Class: ${perent.chalderen.add( this)}".printLN()
+
+   }
+}
+
+fun String.printLN() {
+    println(this)
+    println("*****************")
 }

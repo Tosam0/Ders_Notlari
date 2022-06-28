@@ -75,7 +75,7 @@ fun main(args: Array<String>) {
         7 -> println("United Kingdom Vatandası")
 
     }
-    */
+
 
     val x = readln().toInt()
     when (x) {
@@ -85,7 +85,7 @@ fun main(args: Array<String>) {
         else -> println("sayılar geçersizdir.")
     }
 
-    val yyy = readln().toString()
+    val yyy = readln()
     when (yyy.lowercase(Locale.getDefault())) {
         "ahmet", "samet" -> {
             println("$yyy aykun")
@@ -105,25 +105,26 @@ fun main(args: Array<String>) {
           }
           println("sayı  $abc")
       }*/
+ */
+    deneme()
+}
+fun deneme(){
     println("ilk sayı")
     val sayi1 = readLine()!!.toDouble()
     println("İşlem nedir?")
     val sonuc = readLine().toString()
     println("ikinci sayı")
     val sayi2 = readLine()!!.toDouble()
-    println("Kare hesaplama ")
-    //  var sayi3=readLine()!!.toDouble()
-      when(sonuc){
-    "+" -> println("toplama ${sayi1+sayi2}")
-    "'-' "-> println("fark ${sayi1-sayi2}")
-    "/" -> println("bölüm ${sayi1 / sayi2}")
-    "*" -> println("çarpma ${sayi1 * sayi2}")
-    "%" -> println("kalan ${sayi1 % sayi2}")
-    //    "," -> println("Sayının karesi ${sayi3 * sayi3}")
+//    println("Kare hesaplama ")
+  //    var sayi3=readLine()!!.toDouble()
+    when (sonuc) {
+        "+" -> println("toplama ${sayi1 + sayi2}")
+        "'-' " -> println("fark ${sayi1 - sayi2}")
+        "/" -> println("bölüm ${sayi1 / sayi2}")
+        "*" -> println("çarpma ${sayi1 * sayi2}")
+        "%" -> println("kalan ${sayi1 % sayi2}")
+    //    "[2]" -> println("Sayının karesi ${sayi3 * sayi3}")
 
-    else -> println("geçersiz")
-}
-
-
-
+        else -> println("geçersiz")
+    }
 }
