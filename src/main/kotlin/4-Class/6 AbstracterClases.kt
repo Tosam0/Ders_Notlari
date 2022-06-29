@@ -1,10 +1,9 @@
 package `4-Class`
 
-import javax.annotation.processing.Messager
-
 interface McDonalsServixe {
     fun motoCarier()
 }
+//todo Abstract class 'larda open yada Abstract fun nezaman kullanılır eğerki kullancağınız fun eklemek istediğiniz eklemek istediğiniz belli başlı datalara ihtiyacı var ise kullanılır.
 
 /** //todo bu kısmı önemli BOş zamanlatrımda araştır.
  * Abstract(Soyutlama)
@@ -45,13 +44,21 @@ abstract class McDonals {
     open val policeOfficer: Police = Police()
 
     val spacialBranchName: String = "Taksim"
+
     //aynı zamanda Extansion da edilebilir.
-    infix fun McdonadsExpress.print(messager: String){
+    infix fun McdonadsExpress.print(messager: String) {
     }
-    abstract fun sellCoffee():McCoffe
 
-
-
+    abstract fun sellCoffee(): McCoffe
+    /** aşağıdaki open fun anlamı ben bu fun ekliyorum ama bu funksiyonu,
+    abstract class'ı miras alan bütün class larda override etmek istemiyorum.
+     * eğer bu durumda her yerde override etmiyorsak doğru olanı  2. bir abstract yazmamızdır.
+     */
+    open fun printMenuList() {
+        memuList.forEach {
+            println(it)
+        }
+    }
 }
 
 /** abstract Miras alınabilir. abstract classlar open olmayı sağlar.
@@ -62,6 +69,7 @@ abstract class McdonadsExpress : McDonals() {
     override fun clean(clock: Int) {
         println("Clean time : $clock")
     }
+
     override fun clean1(clock12: Int) {
         TODO("Not yet implemented")
     }
@@ -72,23 +80,25 @@ abstract class McdonadsExpress : McDonals() {
         superVisor
         employeeTow
     }
+
     override val employeeTherr: Employee
         get() = TODO("Not yet implemented")
     override val superVisor: SuperVisor
         get() = TODO("Not yet implemented")
 
-    override fun sellCoffee():McCoffe{
+    override fun sellCoffee(): McCoffe {
         TODO("Not yet implemented")
     }
 
 
 }
+
 /** abstract clasta normalde üst clasınızda normalde override edilmesi zorunlu olcak ama sizin
  * override edilmesi zorunluluğunu kaldırmak istediğiniz bir Fun. varsa bu durumda alt classınızda
  * abstract olan clasınızda bunu override ederseniz sizin alt abstrack clasınızda artık override etmek zorunda değilsiniz.
  * düz claslar için aşağıdaki örnekten belirli oluyor.
  */
-class McDonaldsMaltepeExpres: McdonadsExpress(){
+class McDonaldsMaltepeExpres : McdonadsExpress() {
     override val employeeOne: Employee
         get() = TODO("Not yet implemented")
     override val employeeTow: Employee
@@ -107,9 +117,9 @@ class McDonaldsMaltepeExpres: McdonadsExpress(){
  *  Bir abstract class düz bir class miras alınacaksa override edilmek zorunda.
  */
 class McDonaldsMaltepe : McDonals(), McDonalsServixe {
-      override fun sellCoffee():McCoffe{
-          TODO("Not yet implemented")
-      }
+    override fun sellCoffee(): McCoffe {
+        TODO("Not yet implemented")
+    }
 
     override val superVisor: SuperVisor
         get() = TODO("Not yet implemented")
@@ -128,6 +138,7 @@ class McDonaldsMaltepe : McDonals(), McDonalsServixe {
         // super.clean(clock)
         println("clean ")
     }
+
     //Aynı zamanda infix fun da oluşturulabilir.
     override fun clean1(clock12: Int) {
         TODO("Not yet implemented")
@@ -172,6 +183,7 @@ class McDonaldsKadıkoy : McDonals() {
 //        employeeTherr
 //    }
 }
+
 //Farklı bir yazılış yöntemi
 class McDonalsUnye(
     override val superVisor: SuperVisor,
@@ -183,19 +195,19 @@ class McDonalsUnye(
     override fun clean(clock: Int) {
         TODO("Not yet implemented")
     }
+
     override fun clean1(clock12: Int) {
         TODO("Not yet implemented")
     }
+
     override fun sellCoffee(): McCoffe {
         TODO("Not yet implemented")
     }
+
     override fun motoCarier() {
         TODO("Not yet implemented")
     }
 }
-
-
-
 
 
 class McCoffe
@@ -207,6 +219,6 @@ class McHamburger
 
 fun main() {
     // val mcDonals =McDonals()
-    val mcDonals =McDonaldsMaltepe()
+    val mcDonals = McDonaldsMaltepe()
 }
 
