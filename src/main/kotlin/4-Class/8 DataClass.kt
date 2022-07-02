@@ -2,7 +2,8 @@ package `4-Class`
 
 class Media
 
-/**
+/**Value yi tüttüğümüz claslar data clastır.
+
  * Data clas'en azindan mutlaka 1 paremetre almak zorundadir.
  * Paremetreler mtlaka val yada var ile tanımlanır.
  * Open, abstract, sealed, inner class yapılmaz.
@@ -37,6 +38,7 @@ data class News(//parantezin içindekilere componenetN denir.
         println("Title: $title, description :$description")
     }
 }
+
 
 /**
  * İki Clası aynı gibi duruyor farkları ise
@@ -83,7 +85,11 @@ fun main() {
 //       true,
 //      arrayListOf()
 //    )
-    //"destructturing declaration" aşağudaki
+    /**"destructturing declaration" aşağudaki gibi --->
+     *  Eğerki bizim bir dataclass'ımız varsa bu dataclassı'ın içierisindeki değişkenleri basitce
+    val yazıp parantezler içerisine herhangi bir değişken ismi yazarak
+    o dataclas'daki değişkenlere erişebilirsiniz.
+     */
     val (title, description, hasMediaContent, mediaList) = newsOne
     val (title1, description1, hasMediaContent1) = newsOne
     val (title2, description2) = newsOne
@@ -106,11 +112,11 @@ fun main() {
     val newsFour = News(
         title = newsOne.title,
         description = "Farklı",
-        hasMediaContent =newsOne.hasMediaContent,
+        hasMediaContent = newsOne.hasMediaContent,
         mediaList = newsOne.mediaList
-        )
+    )
 
-     newsOne.component1()
+    newsOne.component1()
 
     newsOne.relatedNewsList
     newsOne.title
@@ -126,7 +132,10 @@ fun main() {
 
     val pair = Pair("ahmet", "aykun")
     val (firet, asdasd, asdas) = Triple("ahmet", "aykun", 23)
-
-
 }
+
+
+
+
+
 
