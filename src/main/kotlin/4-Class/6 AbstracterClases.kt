@@ -50,6 +50,7 @@ abstract class McDonals {
     }
 
     abstract fun sellCoffee(): McCoffe
+
     /** aşağıdaki open fun anlamı ben bu fun ekliyorum ama bu funksiyonu,
     abstract class'ı miras alan bütün class larda override etmek istemiyorum.
      * eğer bu durumda her yerde override etmiyorsak doğru olanı  2. bir abstract yazmamızdır.
@@ -69,12 +70,12 @@ abstract class McdonadsExpress : McDonals() {
     override fun clean(clock: Int) {
         println("Clean time : $clock")
     }
-
     override fun clean1(clock12: Int) {
         TODO("Not yet implemented")
     }
-    //Bir abstract class başka bir abstract class değişkenleri yada fonksyonları override edebilir etmeyedebilir.zorunluluk yoktur.
-
+    /** Bir abstract class başka bir abstract class değişkenleri yada fonksyonları override edebilir etmeyedebilir.
+    zorunluluk yoktur.
+     */
     fun main() {
         fridge
         superVisor
@@ -89,10 +90,7 @@ abstract class McdonadsExpress : McDonals() {
     override fun sellCoffee(): McCoffe {
         TODO("Not yet implemented")
     }
-
-
 }
-
 /** abstract clasta normalde üst clasınızda normalde override edilmesi zorunlu olcak ama sizin
  * override edilmesi zorunluluğunu kaldırmak istediğiniz bir Fun. varsa bu durumda alt classınızda
  * abstract olan clasınızda bunu override ederseniz sizin alt abstrack clasınızda artık override etmek zorunda değilsiniz.
@@ -110,9 +108,7 @@ class McDonaldsMaltepeExpres : McdonadsExpress() {
         super.clean(clock)
         println("clean clock  ")
     }
-
 }
-
 /**
  *  Bir abstract class düz bir class miras alınacaksa override edilmek zorunda.
  */
@@ -120,7 +116,6 @@ class McDonaldsMaltepe : McDonals(), McDonalsServixe {
     override fun sellCoffee(): McCoffe {
         TODO("Not yet implemented")
     }
-
     override val superVisor: SuperVisor
         get() = TODO("Not yet implemented")
     override val employeeOne: Employee

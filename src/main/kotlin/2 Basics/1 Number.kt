@@ -1,6 +1,6 @@
 package `2 Basics`
 
-fun main(){
+fun main() {
 
     /**
      *      Type    |   Size (bits) |       Min value                           |   Max value
@@ -29,30 +29,39 @@ fun main(){
 
 /* -------------------------------------------------------------------------------------------------------------------*/
 
-    val a :Double= 0.1111111111112223
+    val a: Double = 0.1111111111112223
 
-    val minByteValue: Byte= Byte.MIN_VALUE
-    val maxByetValue:Byte=Byte.MAX_VALUE
+    val minByteValue: Byte = Byte.MIN_VALUE
+    val maxByetValue: Byte = Byte.MAX_VALUE
     println("minByteValue ve maxByetValue $minByteValue  ve $maxByetValue")
-    println("minByteValue ve maxByetValue ${minByteValue  + maxByetValue} size {$minByteValue.size}")
+    println("minByteValue ve maxByetValue ${minByteValue + maxByetValue} size {$minByteValue.size}")
 
     val b = 3.2F
 
-    val c =2312312L
+    val c = 2312312L
 
-    val d :Int?= null
+    val d: Int? = null
     println(d)
-    val x=3.1223e1
+    val x = 3.1223e1
 
-    val hexadecimalNumber =0x756
+    val hexadecimalNumber = 0x756
 
 
-    val number:Int=10000
+    /**
+     * boxed :Değişkenin obje referansi olarak tutulmasidir.
+     * UnBoxed :Değişkenin primitive olarak tutulmasıdır.
+     * === operator değişkenlerin referansını karşılaştırırken kullanılır.
+     * == operator değişkenlerin değerini karşılaştırıken kullanılır.
+     */
+
+    val number: Int = 10000
     println(number == number)
-    val boxerNumber:Int? =number
+    val boxerNumber: Int? = number
 
 
-
+    val number2: Int = 1000
+    println(number2 === number2)
+    val boxedNumber:Int? =number2
 
 
 }

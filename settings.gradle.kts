@@ -1,3 +1,3 @@
 
-rootProject.name = "Ders_1"
+rootProject.name = "Ders_Notları"
 
