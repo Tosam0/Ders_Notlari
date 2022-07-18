@@ -30,7 +30,7 @@ fun main() {
      *      Buyukten kucuge liste olusturmak icin downTo() fonksiyonunu kullanabilirsiniz. Infix kullanimi da vardir.
      * **/
 
-    //   val reversedNumbers = 100..1 // Calismaz. Comment'i kaldir kontrol et istersen keko
+    // val reversedNumbers = 100..1 // Calismaz. Comment'i kaldir kontrol et istersen keko
     val reversedNumbers = 100.downTo(1)
     val reversedNumbers2 = 100 downTo 1
    print("reversedNumbers")

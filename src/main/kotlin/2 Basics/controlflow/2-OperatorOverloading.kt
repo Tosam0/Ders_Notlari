@@ -4,11 +4,11 @@ package `2 Basics`.controlflow
 data class PairNumber(var numberOne: Int, var numberTwo: Int) {
 
 
-
     operator fun minus(pairNumber: PairNumber): PairNumber {
 
         val returnPairObject = PairNumber(
-            numberOne - pairNumber.numberOne, numberTwo - pairNumber.numberTwo
+            numberOne - pairNumber.numberOne,
+            numberTwo - pairNumber.numberTwo
         )
 
         println("Sonuc = (${returnPairObject.numberOne} , ${returnPairObject.numberTwo})")
@@ -17,12 +17,10 @@ data class PairNumber(var numberOne: Int, var numberTwo: Int) {
     }
 
 
-
-
 //    operator fun String.plus(value : String): Int{
 //
-//        return this.toInt() + value.toInt()
-//    }
+//       return this.toInt() + value.toInt()
+//   }
 }
 
 fun main(args: Array<String>) {
@@ -53,9 +51,9 @@ fun main(args: Array<String>) {
 
 //    val pairNumber5 = pairNumberOne.minus(pairNumberTwo)
 
-//    println("Sonuc = (${pairNumber.numberOne} , ${pairNumber.numberTwo})")
+  //  println("Sonuc = (${pairNumber.numberOne} , ${pairNumber.numberTwo})")
 //
-//    println("Sonuc = (${pairNumber2.numberOne} , ${pairNumber2.numberTwo})")
+  //  println("Sonuc = (${pairNumber2.numberOne} , ${pairNumber2.numberTwo})")
 //
 //    println("Sonuc = (${pairNumber3.numberOne} , ${pairNumber3.numberTwo})")
 //

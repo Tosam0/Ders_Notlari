@@ -1,5 +1,8 @@
 package `4-Class`
 
+import java.awt.event.MouseAdapter
+import java.awt.event.MouseEvent
+
 /**
  * Nested class'lar outer class'ın uye property'lerine ya da fonksyonlarına erişemezler.
  * Nested class'lar static olarak saklanirlar.Bundan dolayı da outher class üzerinden neyneye

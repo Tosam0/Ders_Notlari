@@ -18,7 +18,8 @@ fun main() {
     val answer = readLine()!!
 
     //state kullanimi
-    if (answer.contains("Evet", ignoreCase = true)) {
+    //contains içeriyormu içinde "Evet" geçiyormu anlamında kullanılır.
+    if (answer.contains("Evet", ignoreCase = true)) {//"ignoreCase" büyük küçük önemli midiye kontrol eder.
         println("Öğrenci")
     } else {
         println("Öğrenci Değil")
@@ -28,15 +29,17 @@ fun main() {
     val result: String = if (answer == "Evet") {
         "Öğrenci"
     } else {
+        "sdasd"
+        "sadsad"
         "Öğrenci Değil"
     }
     println(result)
 
     print("Cinsiyetin  ne?")
-    val sex=readLine()!!
-    val cins:String  =if (sex == "erkek"){
+    val sex = readLine()!!
+    val cins: String = if (sex == "erkek") {
         "erkek"
-    }else{
+    } else {
         "kadın"
     }
     println(cins)
@@ -44,13 +47,12 @@ fun main() {
 
 
     print("evcil hayvanının hangi sesi çırartır?")
-    val hayvan=readLine()!!
-    if (hayvan.contains("miyav")){
+    val hayvan = readLine()!!
+    if (hayvan.contains("miyav")) {
         println("kedi")
-    }else{
+    } else {
         println("köpek")
     }
-
 
 
 /* -------------------------------------------------------------------------------------------------------------------*/
@@ -92,23 +94,19 @@ fun main() {
 //    true ||false = true      ---  veya  ||
 //    false || true = true
 //    false ||false = false
-
 /* -------------------------------------------------------------------------------------------------------------------*/
-
     /**
      *      2 farkli tipteki number degiskenler karsilastirilirken equals fonksiyonu once tiplerini karsilastirdigi icin
      *      eger tipler uyusmuyorsa, ide hata verecektir.
      * **/
-//    if(10 == 10L){    // Calismaz. Comment'i kaldir kontrol et istersen keko
+//   if(10 == 10L){    // Calismaz. Comment'i kaldir kontrol et istersen keko
 //
 //    }
 
     if (10 == 10L.toInt()) {
         println("true")
     }
-
 /* -------------------------------------------------------------------------------------------------------------------*/
-
     /**
      *      Birden fazla sartli durumunuz varsa bunlarin her birini, asagidaki gibi, ayri ayri if seklinde yazmak
      *      if else seklinde yazmaktan daha kotu performans almaniza yol acar. Zira if else durumlarinda dogru case
@@ -138,9 +136,7 @@ fun main() {
     if (grade >= 55) {
 
     }
-
 /* -------------------------------------------------------------------------------------------------------------------*/
-
     /**
      *      Bazi durumlarda if else yazmaktansa, if case'ini yazip return ya da throw gibi kodun devam etmesini bozacak
      *      ifadelerle kodu sonlandirabilirsiniz. Kod calisirken bu if case'ine girmezse devam eden kod blogu calisir ki
@@ -151,17 +147,21 @@ fun main() {
     } else {
         otherMethod()
     }
-
+////////
     if (isStudent) {
         println("Student")
         throw IOException()
 //       return
     }
-
+//doğru bir kullanım değildir.Cevapları birbirine bağlı değilse else if yerine sadece if kullanmalısınız.
+//    if(grade ==100){
+//
+//    }else if (isStudent){
+//
+//    }else if (isMale){
+//
+//    }
     otherMethod()
-
-
-
 }
 private fun otherMethod() {
 }

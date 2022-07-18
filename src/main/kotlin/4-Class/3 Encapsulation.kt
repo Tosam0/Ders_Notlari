@@ -10,9 +10,9 @@ fun main() {
     val sandalye1 = Sandalye()
     val sandalye2 = Sandalye()
     sandalye1.bacaksayısı = 4
-    sandalye1.model = "Modal1"
+  //  sandalye1.model = "Modal1"
     sandalye2.bacaksayısı = 6
-    sandalye2.model = "Modal2"
+   // sandalye2.model = "Modal2"
     println(sandalye1.model)
     println(sandalye2.model)
 }
@@ -30,9 +30,9 @@ class Sandalye {
         }
 
 }
-var Sandalye.deneme123
+var Sandalye.deneme12
     get()="asdsa"
         set(value) {
-            deneme123
+            deneme12
         }
 

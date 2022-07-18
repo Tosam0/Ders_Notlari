@@ -103,7 +103,7 @@ open class Square(name: String, color: String, edgeCount: Int) : Shape(name, col
          * "this" ise bağlı olduğu clası işaret eder.
          */
          super.drawShape()
-     //   this.drawShape()
+     // this.drawShape()
         val square = """
            --------------
            |            |

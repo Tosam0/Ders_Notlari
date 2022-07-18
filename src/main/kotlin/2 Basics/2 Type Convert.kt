@@ -10,7 +10,7 @@ fun main() {
     /**
      *      Kotlin'de implicit type conversion yoktur.
      * **/
-//    val number : Int = (Int) 3L // Calismaz. Comment'i kaldir kontrol et istersen keko
+//   val number : Int = (Int) 3L // Calismaz. Comment'i kaldir kontrol et istersen keko
 
     /**
      *      Tip donusumu icin kullanabileceginiz fonksiyonlar;

@@ -20,7 +20,7 @@ class Media
  * Pair, Triple ozellestirilmis generic data class'lar mevcut.
  */
 
-data class News(//parantezin içindekilere componenetN denir.
+ data class News(//parantezin içindekilere componenetN denir.
     val title: String = "Title",
     val description: String,
     val hasMediaContent: Boolean,

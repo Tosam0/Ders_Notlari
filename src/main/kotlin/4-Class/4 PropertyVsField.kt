@@ -1,5 +1,7 @@
 package `4-Class`
 
+import `4-Class`.ProphertyvsFieled as ProphertyvsFieled1
+
 /** Okunuşu Proporty
  * Kotlinde herşey default olarak public'tir.
  * ESM kodu = Makine kodu demektir.
@@ -35,7 +37,6 @@ class BankAccount {
 
     fun uyeFonksyon() {
         balance
-
     }
 
 
@@ -46,7 +47,7 @@ class BankAccount {
  * getDegisken() ve setDegisken() gibi
  */
 
-fun main() {
+fun main(){
     val bankAccount = BankAccount()
     println(bankAccount.balance)
     bankAccount.balance = 500_000
@@ -57,14 +58,20 @@ fun main() {
 //    println(bankAccount.dep)
 //    bankAccount.dep = 500_000
 //    println(bankAccount.dep)
+    val prophertyvsFieled = ProphertyvsFieled1()
+    prophertyvsFieled.asrin ="mehmet"
+
 }
 
-class deneme {
-   private var asrin = "samet"
+open class ProphertyvsFieled {
+   var asrin = "samet"
         get() {
             return field
         }
         set(value) {
             field = value
         }
+    fun AsrinFun(a:String){
+        asrin
+    }
 }

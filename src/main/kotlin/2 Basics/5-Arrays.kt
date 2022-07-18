@@ -100,7 +100,7 @@ fun main() {
 
     val awesomeArray = arrayOfNulls<String>(5)
     awesomeArray[2] = "Gökhan"
-    //awesomeArray = arrayOf("foo", "boo", "goo", "doo", "loo") // Calismaz. Comment'i kaldir kontrol et istersen keko
+  //  awesomeArray = arrayOf("foo", "boo", "goo", "doo", "loo") // Calismaz. Comment'i kaldir kontrol et istersen keko
 
     /**
      *      Array'in size'i disina cikiyorsaniz (boyutu disina) cikiyorsaniz, IndexOutOfBound hatasini alirsiniz.

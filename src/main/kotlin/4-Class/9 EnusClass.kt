@@ -194,7 +194,7 @@ fun main() {
         }
     }
         val starCount2 = when (team) {
-//            Teams.FENERBAHCE.name.uppercase(Locale.getDefault()) ->{
+//           Teams.FENERBAHCE.name.uppercase(Locale.getDefault()) ->{
 //
 //            } //FArklı kullanımı
             Teams.FENERBAHCE.toString() ->{

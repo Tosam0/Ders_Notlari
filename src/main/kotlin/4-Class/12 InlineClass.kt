@@ -15,6 +15,7 @@ interface Print {
 value class BankAccount3(val balance: Int) : Print { //<--şuan sadece 1 tane değişken tanımlanabiliyor.
     init {
         println("balance : $balance")
+
     }
 
     // val accountNumber3: Long = 6468464
@@ -94,40 +95,5 @@ fun main() {
  *  bunlar  generic type ,Nullable ve super type 'nı paremetre  olarak beklenen
  *  bir fonksyon kullanıyorsam, kullanmamızın espirisi kalmıyor.
  * */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

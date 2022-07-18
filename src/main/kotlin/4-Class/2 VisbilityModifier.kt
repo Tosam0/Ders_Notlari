@@ -38,7 +38,6 @@ open class Foo() {
 
 
 
-
 class Boo private constructor() : Foo() {
     init {
         //   name
@@ -56,7 +55,6 @@ class Doo() {
         foo.age
         //  foo.email
     }
-
 }
 
 
@@ -64,6 +62,4 @@ fun main() {
     val foo = Foo()
      //  foo.name = "asdasd"
     foo.surName = "aykuns"
-
-
 }

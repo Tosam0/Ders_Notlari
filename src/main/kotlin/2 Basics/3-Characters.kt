@@ -9,7 +9,7 @@ fun main() {
     val firstCharOfName2: Char = '½'
     val firstCharOfName1: Char = '*'
     val firstCharOfName: Char = 'G'
-//    val firstCharOfName2 : Char = "G"
+///   val firstCharOfName2 : Char = "G"
 //    val firstCharOfName3: Char = 'Gö'
     val charNumber: Char = '6'
 //    val charNumber2: Char = '53'
@@ -59,7 +59,21 @@ fun main() {
     /**
      *      Unicode karakterlerini de tanimlamak icin kullanilabilir.
      * **/
-    val uniCode = '\uFF01'
+    val uniCode = '\u4E01'
+    val uniCode1 = '\u4E02'
+    val uniCode2 = '\u304C'
+    val uniCode3 = '\u00C5'
 
-    println("uniCode" + uniCode)
+    val uniCode4 = '\u0022'
+    val uniCode5 = '\u0628'
+
+
+    println("uniCode $uniCode")
+    println("uniCode $uniCode1")
+    println("uniCode $uniCode2")
+    println("uniCode $uniCode3")
+
+    println("uniCode $uniCode4$uniCode4")
+    println("uniCode $uniCode5")
+
 }

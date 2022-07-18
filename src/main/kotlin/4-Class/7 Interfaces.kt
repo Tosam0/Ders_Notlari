@@ -125,6 +125,10 @@ class Child(override val prop: Int) : MyIntegerface {
 
 //////////////////////////////////
 interface A {
+    class Inner {
+
+    }
+
     fun foo() {
         println("A")
     }

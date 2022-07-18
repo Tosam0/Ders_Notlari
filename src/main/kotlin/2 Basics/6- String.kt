@@ -16,7 +16,7 @@ fun main() {
     val nameArray = charArrayOf(char1, char2, char3, char4, char5)
 
     for (char in name) {
-        println(char)
+        println("+ ${char}")
     }
     println("+++ ${nameArray[4]}")
     //todo iş görüşmesinde çıkar
