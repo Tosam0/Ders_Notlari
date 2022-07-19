@@ -7,11 +7,10 @@ package `4-Class`
  *
  ********* abstract, open, inner, sealed olamazlar.**********
  * yopisi geregi zaten final'dirlar.final keyword' kuLlanmak redundant vygrisi verir.
- * ozunde class olduklari icin, constructor kullanabilinler ve bu constructor icersinde veri tutabilicler.
+ * o yüzunde class olduklari icin, constructor kullanabilinler ve bu constructor icersinde veri tutabilicler.
  *
  * java karsiliginda bu enum sabitleri static final class lor seklinde tutulunlar.
 Bu sayede, kullanirken bu sabitlerin nesnesi oluşturulmak zorunda kalmayız.
- * sayede, kullanirken bu sabitlerin nesnesini olusturmak zorunda kalmayiz.
  *
  * Enum class'larinin nesnesi olusturulamaz.
  *
@@ -47,7 +46,7 @@ enum class TeamsType(val starCount: Int) {
     BESIKTAS(2)
 }
 
-enum class Teams(val starCount: Int) : TeamsFunctionlity {
+enum class Teams(var starCount: Int) : TeamsFunctionlity {
     /** İcerisindekilere enum(inam) sabiti denir.
      * enum sabitleri Clas olarak tutulur arkaplanda.
      */
@@ -71,14 +70,19 @@ enum class Teams(val starCount: Int) : TeamsFunctionlity {
             TODO("Not yet implemented")
         }
 //        override val name:String
-//            get() =  TODO("Not yet implemented")
-    };
-//    override fun pratice() {
-//        super.pratice()
-//    }
+//            get() =  "TOD("Not yet implemented")"
+//
+//        override val ordinal:Int
+//            get()="TOD("Not yet implemented")"
+
+   };
+    override fun pratice() {
+       super.pratice()
+   }
+
 }
 
-enum class DaysOfWeek(val dayNumber: Int) {
+enum class DaysOfWeekType(val dayNumber: Int) {
     Pazartesi(1) {
         override fun toString(): String {
             return "PAZARTESİ"
@@ -118,7 +122,6 @@ enum class DaysOfWeek(val dayNumber: Int) {
 
 enum class Sex {
     Male {
-
         override val typeCount: Int
             get() = TODO(" ")
 
@@ -217,14 +220,14 @@ fun main() {
 
 
 
-    println(DaysOfWeek.Carsamba.name)
-    println(DaysOfWeek.Carsamba.toString())
+    println(DaysOfWeekType.Carsamba.name)
+    println(DaysOfWeekType.Carsamba.toString())
 
     println(Teams.FENERBAHCE.name)
     println(Teams.FENERBAHCE.toString())
 
-    println(DaysOfWeek.Carsamba.ordinal)
-    println(DaysOfWeek.Carsamba.dayNumber)
+    println(DaysOfWeekType.Carsamba.ordinal)
+    println(DaysOfWeekType.Carsamba.dayNumber)
 
     //FENERBAHCE değeri enus olarak yoksa ,error verir.
     Teams.valueOf("FENERBAHCE")
@@ -234,6 +237,8 @@ fun main() {
 
     val getTeam = getBestTeam(Teams.GALATASARAY)
     val bestestTeam = getBestTeam("FENERBAHCE")
+
+  //  Teams.FENERBAHCE.starCount =7
 }
 
 fun getBestTeam(teams: Teams): Teams {

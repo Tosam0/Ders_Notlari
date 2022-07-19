@@ -6,7 +6,6 @@ import `3- functions`.NewsType
 //todo crtl+ r Bulma
 //todo "ctrl+ /"  yorum satırı yapar.
 //todo ctrl + alt + SHIFT + L //kod düzenlemesi yapar
-//todo shift+Shift Show Kotlin By Code + Heryerde arama yapmak için kullanılır.
 fun main() {
 
     val okkes = Ökkeş()
@@ -18,7 +17,7 @@ fun main() {
         println(this.toString())
     }
     val mainLee = Lee("ahmet", "Açık", "Red", 1.999)
-    val mainTee = Tee("samet", "Blue",2,16.4)
+    val mainTee = Tee("samet", "Blue", 2, 16.4)
     val mainSee = See("ayben", "Yellow", 2)
     val mainUee = Uee("ismail")
     mainLee.drips()
@@ -30,9 +29,9 @@ fun main() {
 }
 
 open class NewClas2(val name: String) {
-   var xColor: String = ""
+    var xColor: String = ""
     var sıfır1_1 = 0
-   var Names: String = ""
+    var Names: String = ""
     var sıfır2_2 = 0.0
     var Ten: String = ""
 
@@ -55,7 +54,7 @@ open class NewClas2(val name: String) {
         "two $name".printLOGs()
     }
 
-    constructor(name: String, ten_colors: String, Xcolor: String,sıfır2: Double) : this(name) {
+    constructor(name: String, ten_colors: String, Xcolor: String, sıfır2: Double) : this(name) {
         Names = name
         Ten = ten_colors
         xColor = Xcolor
@@ -81,7 +80,7 @@ open class NewClas2(val name: String) {
 
 
 class Tee(name: String, Xcolor: String, sıfır1: Int, sıfır2: Double) :
-    NewClas2(name,Xcolor,sıfır1,sıfır2) {
+    NewClas2(name, Xcolor, sıfır1, sıfır2) {
 
     override fun drips() {
         super.drips()
@@ -98,7 +97,7 @@ class Tee(name: String, Xcolor: String, sıfır1: Int, sıfır2: Double) :
 }
 
 class Lee(name: String, ten_colors: String, Xcolor: String, sıfır2: Double) :
-    NewClas2(name,ten_colors,Xcolor,sıfır2) {
+    NewClas2(name, ten_colors, Xcolor, sıfır2) {
     override fun drips() {
         super.drips()
         val lee = """"
@@ -133,7 +132,7 @@ open class See(name: String, Xcolor: String, sıfır1: Int) : NewClas2(name, Xco
 }
 
 class Uee(name: String) : See(name, "Black", 69) {
-      override fun drips() {
+    override fun drips() {
         super.drips()
         val uEE = """
             **       **
@@ -195,7 +194,7 @@ fun Ökkeş.hiderorder(hiderrorder: (title: String, getfilter: () -> String) -> 
 }
 
 
-class Ökkeş() {
+class Ökkeş {
     fun getNewsType(newsType: String): String {
         return when (newsType.toString()) {
             NewsType.breakingNews -> "Breaking"

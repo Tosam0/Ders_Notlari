@@ -27,7 +27,7 @@ class Outer {
         fun prinName() {
 //            name
 //            surname
-//            getAge
+//           getAge
         }
 
 //        fun prinName(outer: Outer) {

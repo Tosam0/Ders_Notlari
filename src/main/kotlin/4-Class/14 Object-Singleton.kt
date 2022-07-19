@@ -1,7 +1,9 @@
 package `4-Class`
 
 /** object keywordu koyunca oluşuyor.
- *
+ *  Özünde herhangi bir class'tan birden fazla obje oluşturduğumuzda bunlar memory'de
+ *  ayrı ayrı yer kaplar.
+ *  Singleton ise bir class'ın dışarıdan birden fazla instance'ını oluşturmayı engeller.
  */
 
 object ProfileKotlin {
@@ -20,8 +22,6 @@ fun main() {
 
     println(ProfileKotlin.counter)
 }
-
-
 
 
 

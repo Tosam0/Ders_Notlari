@@ -1,11 +1,13 @@
 package `4-Class`
 
+import `4-Class`.News as News
+
 class Media
 
 /**Value yi tüttüğümüz claslar data clastır.
 
  * Data clas'en azindan mutlaka 1 paremetre almak zorundadir.
- * Paremetreler mtlaka val yada var ile tanımlanır.
+ * Paremetreler mutlaka val ya da var ile tanımlanır.
  * Open, abstract, sealed, inner class yapılmaz.
  *Tüm data class'lar final olduğu için final modifier'i redundant uyarısı verir.
  *
@@ -62,7 +64,7 @@ class NewsData(
 
 fun main() {
     val newsOne = News(
-        title = "Ynei bir eğitim",
+       title = "Ynei bir eğitim",
         description = "Eğitim dönemi yeni bir şekli",
         hasMediaContent = true,
         mediaList = arrayListOf()
@@ -74,14 +76,14 @@ fun main() {
 //        arrayListOf()
 //    )
     val newsTwoDuzClass = NewsData(
-        title = "Ynei bir eğitim",
+        title = "Yeni bir eğitim",
         description = "Eğitim dönemi yeni bir şekli",
         hasMediaContent = true,
         mediaList = arrayListOf()
     ) //Name argumentleri vermek zorunda değiliz aşşağıdaki farklı yöntemi
 //  val newsTwoDuzClass1 = NewsData(
 //        "Ynei bir eğitim",
-//         "Eğitim dönemi yeni bir şekli",ü
+//         "Eğitim dönemi yeni bir şekli",
 //       true,
 //      arrayListOf()
 //    )
@@ -92,12 +94,13 @@ fun main() {
      */
     val (title, description, hasMediaContent, mediaList) = newsOne
     val (title1, description1, hasMediaContent1) = newsOne
-    val (title2, description2) = newsOne
+    var (title2, description2) = newsOne
+    //val (title1, description1, hasMediaContent1, mediaList1) = newsTwoDuzClass //Düz clasta yapılamaz
+    title2 ="assadas"
 
     newsOne.mediaList
     mediaList
 
-    //val (title1, description1, hasMediaContent1, mediaList1) = newsTwoDuzClass //Düz clasta yapılamaz
 
     /**  equals = değişkenlerini karşılaştırma yapılıyor.
      *   hashCode = Classların oluşturduğu hashCodeStringi var bağzen elinizdeki objenin

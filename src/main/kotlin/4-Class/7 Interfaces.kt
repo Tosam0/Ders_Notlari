@@ -119,7 +119,8 @@ class Child(override val prop: Int) : MyIntegerface {
     }
 
     override fun bar() {
-        // super.bar()   // body'si olmayan bir değişkenin super'i çağıralamaz.Neden yaptığı bir ,işme yoktur.
+  /** body'si olmayan bir değişkenin super'i çağıralamaz.Neden yaptığı bir ,işme yoktur.*/
+        // super.bar()
     }
 }
 
@@ -189,7 +190,7 @@ class D : E(), A, B {
 
     override fun bar() {
 
-    // super<A>.bar() //  A interface'inin bar fonksyonunun body'si yok. Dolayısıyla super ile erişilemez.
+   // super<A>.bar() //  A interface'inin bar fonksyonunun body'si yok. Dolayısıyla super ile erişilemez.
         super<B>.bar() // <B> arayuzu yazmak zorunlu kalmiyorsunuz. Buna redutant uyarısı verilir.
         super.bar()
         println("asd")

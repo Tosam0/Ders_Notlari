@@ -51,7 +51,7 @@ izin verileceği yazıyor.
  *
  *Inline class'lar herhangi bir interface'i implement edebilirler,bir baska  class'i miraz alamazlar.
  *
- * Inline class'lar m,iras alinmaz. Cunku defoult olarak final'lerdir ve değiştirilemezlerdir.
+ * Inline class'lar miras alinmaz. Cunku defoult olarak final'lerdir ve değiştirilemezlerdir.
  * Open keyword'uyle beraber kullanılmaz.final keyword'u vermek de redundot uyarısı verir.
  * abstrack,sealed class  keyword'u ile de kullanılmaz.
  *
@@ -95,5 +95,11 @@ fun main() {
  *  bunlar  generic type ,Nullable ve super type 'nı paremetre  olarak beklenen
  *  bir fonksyon kullanıyorsam, kullanmamızın espirisi kalmıyor.
  * */
+
+
+
+
+
+
 
 
