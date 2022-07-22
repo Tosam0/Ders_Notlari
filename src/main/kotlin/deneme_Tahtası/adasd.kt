@@ -1,3 +1,5 @@
+package deneme_Tahtası
+
 import `4-Class`.printLog
 
 fun main() {

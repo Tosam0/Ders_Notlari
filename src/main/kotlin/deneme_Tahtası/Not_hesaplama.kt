@@ -21,7 +21,7 @@ fun main(){
     val totalNot = agnoWithNoteVize + agnoWithNoteFinal
     when(totalNot){
 
-        in 0..50 -> println("Notunuz : FF ($totalNot)")
+        in 0..50 -> println("($totalNot)")
         in 51..64 -> println("Notunuz : DD ($totalNot)")
         in 65..69 -> println("Notunuz : DC ($totalNot)")
         in 70..74 -> println("Notunuz : CC ($totalNot)")

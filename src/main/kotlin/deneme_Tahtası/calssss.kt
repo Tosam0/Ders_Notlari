@@ -1,6 +1,5 @@
 fun main() {
 
-
     val countryCode5 = readln().toInt()
 
     when (countryCode5 % 100) {
@@ -24,10 +23,6 @@ fun main() {
     denmeHiderFunksion(::deneme333)
 
 }
-
-
-
-
 /*
 fun Int.toOrdinal():String{
 var suffix =

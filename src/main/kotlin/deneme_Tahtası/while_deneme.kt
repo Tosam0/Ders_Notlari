@@ -1,3 +1,5 @@
+package deneme_Tahtası
+
 fun main(){
     val i = 0
    other@ do {

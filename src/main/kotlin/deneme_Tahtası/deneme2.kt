@@ -79,6 +79,4 @@ fun Aylar(aylar1: Ay, deger: Int): Int =
     }
 
 
-//open class deneme(name: String) :NewDataClass(name, surname = ){
-//
-//}
+
