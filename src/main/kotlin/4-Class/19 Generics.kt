@@ -125,15 +125,18 @@ fun main() {
 //    val corelliFactory: TransportFactory<Corelli> = TransportFactory<Corelli>(corelli)
 
     calculate<Int>(2, 3)
-  //   calculate<String>(2, 21)
+    calculate<String>(2, 21)
+
     println(calculate<Int>(2, 55))
 }
 
+/**Sadece inline olarak kullanılır.*/
 inline fun <reified T> calculate(numnerOne: Int, numberTwo: Int): T {
     return when (T::class.java) {
         String::class.java -> {
             (numnerOne + numberTwo) as T
         }
+
         else -> {
             (numnerOne + numberTwo) as T
         }
