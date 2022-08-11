@@ -2,7 +2,7 @@ package `4-Class`
 
 /**Claslar Önemli İş görüşmelerinde çıkar
  * todo -77(1:14)dk bak dk44 encapsulation anlamı Kekod - Ders15 : Kotlin Classes
- * okunuşu Visibility Modifair
+ *
  *public — Her yerden erişilebilir. public kelimesi halka açık anlamına gelmektedir. Bu erişim belirleyicisi ile tanımlanan her şey diğer bütün sınıflarlardan erişilebilinir. (Java ile aynı)
  *private — Sadece tanımlandığı sınıftan erişilebilir. private özel veya gizli anlamına gelir. Bu erişim belirleyicisi ile tanımlanan herhangi bir eleman sadece ve sadece aynı sınıf içerisinden erişilebilir diğer sınıflar erişemez. (Java ile aynı)
  *protected — Aynı sınıftan ya da o sınıftan türetilen sınıflar, nesneler tarafından erişilebilir. (Java’dan biraz daha farklı)

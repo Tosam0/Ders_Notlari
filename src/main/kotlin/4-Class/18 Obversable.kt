@@ -10,28 +10,30 @@ class User85 {
     var name by Delegates.observable("Initialized Value") { property, oldValue, newValue ->
         println("$oldValue -> $newValue")
     }
-
-    var max: Int by Delegates.vetoable(0) { property, oldValue, newValue ->
-        newValue > oldValue
-
-        //throw  IllegalArgumentException("New value must be lerger than old")
-    }
-    var max2: Int by Delegates.observable(0) { property, oldValue, newValue ->
-
-        true
-    }
 }
+
+var max: Int by Delegates.vetoable(0) { property, oldValue, newValue ->
+    newValue > oldValue
+
+    //throw  IllegalArgumentException("New value must be lerger than old")
+}
+var max2: Int by Delegates.observable(0) { property, oldValue, newValue ->
+
+    true
+}
+
 
 fun main() {
 
     var user = User85()
-    println(user.max)
+    println(max)
     user.name = "Ahmet"
     user.name = "SAmet"
-    user.max = 54
-    user.max = 1000
+    max = 54
+    max = 1000
 
-    user.max2 = 3
+    max2 = 3
+    max2 = 32
 /////////////////////////////////////
     val deneme1 = HigherOrder_Ornek { oldvalue, newValue ->
         val changeValue = newValue - oldvalue
@@ -78,6 +80,8 @@ class Interface_Ornek(val delegatesInterface: DelegatesInterface) {
             field = value
         }
 }
+
+
 
 
 
