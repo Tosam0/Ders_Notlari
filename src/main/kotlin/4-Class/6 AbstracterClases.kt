@@ -38,8 +38,8 @@ abstract class McDonals {
     // abstract infix  şeklinde kullanabiliniyor ama kurallarına uyması gerekiyor.
     abstract infix fun clean1(clock12: Int)
 
-    // { //opsiyonel
-    //  }
+//     { //opsiyonel
+//      }
     //open bir değişkende overide yapabiliyorsunuz.
     open val policeOfficer: Police = Police()
 

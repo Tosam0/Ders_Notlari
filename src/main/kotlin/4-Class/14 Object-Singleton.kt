@@ -6,13 +6,14 @@ package `4-Class`
  *  ayrı ayrı yer kaplar.
  *  Singleton ise bir class'ın dışarıdan birden fazla instance'ını oluşturmayı engeller.
  */
-open class Person1(){
+open class Person1() {
 
 }
 
 object ProfileKotlin {
     var nickName: String? = null
     var counter: Int = 0
+    fun multiple(c: Int, x: Int): Int = x * c
 
 }
 
@@ -27,7 +28,8 @@ fun main() {
     ProfileKotlin.counter++
 
     println(ProfileKotlin.counter)
-
+    var result =ProfileKotlin.multiple(3,66)
+    println("sonuç: $result")
 }
 
 /**1) Singleton pattern nedir?
@@ -40,7 +42,6 @@ Java karsiliginda static keywordu ile yazildigi icin, yanlis ve gereksiz kullani
 garbage collector'in toplamadigi veri sayisi artacak.
 Bu da memory leak'e sebep olabilir.
  */
-
 
 
 /**

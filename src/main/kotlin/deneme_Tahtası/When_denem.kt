@@ -119,7 +119,7 @@ fun deneme(){
   //    var sayi3=readLine()!!.toDouble()
     when (sonuc) {
         "+" -> println("toplama ${sayi1 + sayi2}")
-        "'-' " -> println("fark ${sayi1 - sayi2}")
+        "-" -> println("fark ${sayi1 - sayi2}")
         "/" -> println("bölüm ${sayi1 / sayi2}")
         "*" -> println("çarpma ${sayi1 * sayi2}")
         "%" -> println("kalan ${sayi1 % sayi2}")

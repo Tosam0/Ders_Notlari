@@ -46,6 +46,7 @@ class Media
  * İki Clası aynı gibi duruyor farkları ise
  */
 class NewsData(
+
     val title: String = "Title",
     val description: String,
     val hasMediaContent: Boolean,

@@ -260,7 +260,7 @@ class NewsType {
  *      Bir Higher Order Function'ina parametre verirken Class ismi.() seklindde tanimlama yapilabilir.
  *      Bu sayede ilgili class da parametre parantezi icerisine yazilabilir.
  */
-fun News.getNewsFromServer(channelType: String, newsType: NewsType, getNews: NewsType.(Int) -> Unit) {
+ fun News.getNewsFromServer(channelType: String, newsType: NewsType, getNews: NewsType.(Int) -> Unit) {
     when (channelType) {
         "KanalD" -> {
             getNews(newsType, 1)
