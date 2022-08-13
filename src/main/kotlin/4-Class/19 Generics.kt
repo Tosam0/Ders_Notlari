@@ -62,6 +62,7 @@ class Beetle(
     }
 }
 
+
 ////////////Bisiklet
 open class Bisan(
     override val name: String = "Bisan",
@@ -97,6 +98,7 @@ class TransportFactory<out T : Auto>(transportationFunctions: T) {
 }
 
 fun main() {
+
     val miniCoper: MiniCoper = MiniCoper()
     val john: John = John()
     val johnCabrio: JohnCabrio = JohnCabrio()
@@ -125,7 +127,7 @@ fun main() {
 //    val corelliFactory: TransportFactory<Corelli> = TransportFactory<Corelli>(corelli)
 
     calculate<Int>(2, 3)
-    calculate<String>(2, 21)
+  // calculate<String>(2, 21)
 
     println(calculate<Int>(2, 55))
 }
@@ -134,17 +136,19 @@ fun main() {
 inline fun <reified T> calculate(numnerOne: Int, numberTwo: Int): T {
     return when (T::class.java) {
         String::class.java -> {
-            (numnerOne + numberTwo) as T
+            (numnerOne + numberTwo) as String as T
         }
 
         else -> {
-            (numnerOne + numberTwo) as T
+            (numnerOne + numberTwo) as Int as T
         }
     }
 }
 
 
-
+fun <T> log(loginFragment: T) {
+    println("$loginFragment")
+}
 
 
 

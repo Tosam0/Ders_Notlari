@@ -6,6 +6,14 @@ import `3- functions`.NewsType
 //todo crtl+ r Bulma
 //todo "ctrl+ /"  yorum satırı yapar.
 //todo ctrl + alt + SHIFT + L //kod düzenlemesi yapar
+
+/**Top-Level Functions : herhangi bir sınıf, nesne veya arabirimin dışında tanımlanan bir Kotlin
+ * paketi içindeki fonksiyonlardır. Bu fonksiyonu kullanarak, herhangi bir nesne oluşturmanıza veya
+ * herhangi bir sınıfı çağırmanıza gerek kalmadan doğrudan çağırdığınız fonksiyonlar oldukları anlamına
+ * gelir.
+ *
+ */
+
 fun main() {
 
     val okkes = Ökkeş()
@@ -26,13 +34,22 @@ fun main() {
     mainUee.drips()
 
 
+    /////////////////////
+    val newClas2 :NewClas2 =NewClas2("Mahmut")
+    val newClas2Factory:Transformens<NewClas2> = Transformens<NewClas2>(mainLee)
+    println(newClas2Factory)
 }
 
+
+class Transformens< in T : NewClas2>(newClas2: T) {
+
+}
+/////////////////////////
 open class NewClas2(val name: String) {
     var xColor: String = ""
-    var sıfır1_1 = 0
+    var sifir1_1 = 0
     var Names: String = ""
-    var sıfır2_2 = 0.0
+    var sifir2_2 = 0.0
     var Ten: String = ""
 
     // init {
@@ -42,15 +59,15 @@ open class NewClas2(val name: String) {
     constructor(name: String, Xcolor: String, sıfır1: Int, sıfır2: Double) : this(name) {
         Names = name
         xColor = Xcolor
-        sıfır1_1 = sıfır1
-        sıfır2_2 = sıfır2
+        sifir1_1 = sıfır1
+        sifir2_2 = sıfır2
         "tree $xColor $sıfır2".printLOGs()
     }
 
     constructor(name: String, Xcolor: String, sıfır1: Int) : this(name) {
         Names = name
         xColor = Xcolor
-        sıfır1_1 = sıfır1
+        sifir1_1 = sıfır1
         "two $name".printLOGs()
     }
 
@@ -58,7 +75,7 @@ open class NewClas2(val name: String) {
         Names = name
         Ten = ten_colors
         xColor = Xcolor
-        sıfır2_2 = sıfır2
+        sifir2_2 = sıfır2
         "secondary $Names".printLOGs()
     }
 
@@ -72,8 +89,8 @@ open class NewClas2(val name: String) {
         println("name :$name")
         println("Ten : $Ten")
         println("color: $xColor")
-        println("sıfır1: $sıfır1_1")
-        println("sıfır2: $sıfır2_2")
+        println("sıfır1: $sifir1_1")
+        println("sıfır2: $sifir2_2")
     }
 
 }
@@ -154,12 +171,15 @@ fun Ökkeş.getfunctions(strk: String, newsType: NewsType1, getnew: NewsType1.(I
         "Kanal" -> {
             getnew(newsType, 2)
         }
+
         "A haber" -> {
             getnew(newsType, 2)
         }
+
         "fox tl" -> {
             getnew(newsType, 2)
         }
+
         "knaltürk" -> {
             getnew(newsType, 2)
         }

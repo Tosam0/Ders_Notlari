@@ -61,3 +61,4 @@ enum class Newclass(val index: Int){
     atobus(2)
 }
 
+
